@@ -457,6 +457,8 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   // it's now easier to add "KnowledgeCutOffDate" instead of stupid hardcoding it, as was done previously.
   "gemini-pro": "2023-12",
   "gemini-pro-vision": "2023-12",
+  "gemini-3-pro-preview": "2024-02",
+  "gemini-3-pro-image-preview": "2024-02",
   "deepseek-chat": "2024-07",
   "deepseek-coder": "2024-07",
 };
@@ -483,6 +485,8 @@ export const VISION_MODEL_REGEXES = [
   /gemini-1\.5/,
   /gemini-exp/,
   /gemini-2\.[05]/,
+  /gemini-3/,
+  /image-preview/,
   /learnlm/,
   /qwen-vl/,
   /qwen2-vl/,
@@ -499,6 +503,11 @@ export const VISION_MODEL_REGEXES = [
 export const EXCLUDE_VISION_MODEL_REGEXES = [/claude-3-5-haiku-20241022/];
 
 const openaiModels = [
+  // Gemini 3.0 Models (Injected for Relay Support)
+  "gemini-3-pro-preview",
+  "gemini-3-pro-image-preview",
+  "gemini-3-pro-preview-thinking",
+
   // As of July 2024, gpt-4o-mini should be used in place of gpt-3.5-turbo,
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
   "gpt-3.5-turbo",
@@ -696,8 +705,8 @@ const chatglmModels = [
   "cogview-3",
   "cogview-3-flash", // free
   // 目前无法适配轮询任务
-  //   "cogvideox",
-  //   "cogvideox-flash", // free
+  //    "cogvideox",
+  //    "cogvideox-flash", // free
 ];
 
 const siliconflowModels = [
