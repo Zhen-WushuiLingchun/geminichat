@@ -459,6 +459,7 @@ export const KnowledgeCutOffDate: Record<string, string> = {
   "gemini-pro-vision": "2023-12",
   "gemini-3-pro-preview": "2024-02",
   "gemini-3-pro-image-preview": "2024-02",
+  "gemini-3-flash-preview":"2025-11",
   "deepseek-chat": "2024-07",
   "deepseek-coder": "2024-07",
 };
@@ -507,6 +508,7 @@ const openaiModels = [
   "gemini-3-pro-preview",
   "gemini-3-pro-image-preview",
   "gemini-3-pro-preview-thinking",
+  "gemini-3-flash-preview",
 
   // As of July 2024, gpt-4o-mini should be used in place of gpt-3.5-turbo,
   // as it is cheaper, more capable, multimodal, and just as fast. gpt-3.5-turbo is still available for use in the API.
